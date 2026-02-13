@@ -189,6 +189,19 @@ function initEventListeners() {
         const backdrop = elements.settingsModal.querySelector('.modal-backdrop');
         if (backdrop) backdrop.addEventListener('click', closeSettingsModal);
     }
+
+    // Global Escape Key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (elements.editModal && elements.editModal.classList.contains('active')) {
+                closeEditModal();
+            }
+            if (elements.settingsModal && elements.settingsModal.classList.contains('active')) {
+                closeSettingsModal();
+            }
+        }
+    });
+
 }
 
 // ===== INIT =====

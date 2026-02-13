@@ -11,7 +11,7 @@ export function renderCategoriesList() {
             <div class="category-color" style="background: ${c.color}"></div>
             <span class="category-name">${c.name}</span>
             ${c.id !== 'default' ? `
-                <button class="delete-category-btn" data-id="${c.id}">
+                <button class="delete-category-btn" aria-label="Usuń kategorię" data-id="${c.id}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                         <path d="M18 6L6 18M6 6l12 12"/>
                     </svg>
