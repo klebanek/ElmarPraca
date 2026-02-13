@@ -84,13 +84,13 @@ export function renderHistory() {
                         </div>
                         <div style="display: flex; align-items: center;">
                             <span class="history-item-total">${entry.totalWorkTime}</span>
-                            <button class="history-edit-btn" data-index="${index}" title="Edytuj">
+                            <button class="history-edit-btn" aria-label="Edytuj wpis" data-index="${index}" title="Edytuj">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                                     <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
                                     <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
                                 </svg>
                             </button>
-                            <button class="history-delete-btn" data-index="${index}" title="Usuń">
+                            <button class="history-delete-btn" aria-label="Usuń wpis" data-index="${index}" title="Usuń">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                                     <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
                                 </svg>
@@ -259,7 +259,7 @@ export function renderEditBreaks() {
                 <input type="time" class="break-start-input" value="${startTime}" data-index="${index}">
                 <span>-</span>
                 <input type="time" class="break-end-input" value="${endTime}" data-index="${index}">
-                <button class="remove-break-btn" data-index="${index}" title="Usuń przerwę">
+                <button class="remove-break-btn" aria-label="Usuń przerwę" data-index="${index}" title="Usuń przerwę">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12"/>
                     </svg>
