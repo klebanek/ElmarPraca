@@ -333,12 +333,15 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, var(--primary) 100%);
+    background-size: 200% auto;
     color: white;
     box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+    transition: 0.5s;
 }
 
 .btn-primary:not(:disabled):hover {
+    background-position: right center;
     box-shadow: 0 8px 25px rgba(13, 148, 136, 0.5);
 }
 
@@ -692,7 +695,9 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: var(--bg-secondary);
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1.25rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
@@ -1648,7 +1653,9 @@ body {
 }
 
 .stats-card {
-    background: var(--bg-secondary);
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: var(--radius-lg);
     padding: 1.25rem;
     border: 1px solid var(--border-color);

@@ -2,12 +2,12 @@
     "name": "INOVIT - Ewidencja Czasu Pracy",
     "short_name": "INOVIT",
     "description": "INOVIT - System ewidencji czasu pracy z funkcjami statystyk, kategorii i eksportu danych",
-    "start_url": "/",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#0a0f1a",
     "theme_color": "#0d9488",
     "orientation": "portrait-primary",
-    "scope": "/",
+    "scope": ".",
     "lang": "pl-PL",
     "categories": ["productivity", "utilities", "business"],
     "icons": [
@@ -65,21 +65,21 @@
             "name": "Rozpocznij pracę",
             "short_name": "Start",
             "description": "Rozpocznij śledzenie czasu pracy",
-            "url": "/?action=start",
+            "url": "?action=start",
             "icons": [{ "src": "icon-96.png", "sizes": "96x96" }]
         },
         {
             "name": "Historia",
             "short_name": "Historia",
             "description": "Zobacz historię pracy",
-            "url": "/?action=history",
+            "url": "?action=history",
             "icons": [{ "src": "icon-96.png", "sizes": "96x96" }]
         },
         {
             "name": "Statystyki",
             "short_name": "Statystyki",
             "description": "Zobacz statystyki pracy",
-            "url": "/?action=stats",
+            "url": "?action=stats",
             "icons": [{ "src": "icon-96.png", "sizes": "96x96" }]
         }
     ]

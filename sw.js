@@ -1,23 +1,24 @@
-// Elmar Service Worker v2.0 -> INOVIT Service Worker v1.0
-const CACHE_NAME = 'inovit-cache-v1';
-const OFFLINE_URL = '/';
+// INOVIT Service Worker v1.1
+const CACHE_NAME = 'inovit-cache-v1.1';
+const OFFLINE_URL = 'index.html';
 
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/js/main.js',
-    '/js/config.js',
-    '/js/utils.js',
-    '/js/state.js',
-    '/js/storage.js',
-    '/js/modules/timer.js',
-    '/js/modules/history.js',
-    '/js/modules/statistics.js',
-    '/js/modules/settings.js',
-    '/js/modules/export.js',
-    '/js/modules/ui.js',
-    '/style.css',
-    '/manifest.json',
+    '.',
+    'index.html',
+    'js/main.js',
+    'js/config.js',
+    'js/utils.js',
+    'js/state.js',
+    'js/storage.js',
+    'js/modules/timer.js',
+    'js/modules/history.js',
+    'js/modules/statistics.js',
+    'js/modules/settings.js',
+    'js/modules/export.js',
+    'js/modules/ui.js',
+    'js/modules/pwa.js',
+    'style.css',
+    'manifest.json',
     'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
 ];
 
@@ -127,12 +128,12 @@ self.addEventListener('notificationclick', event => {
     if (event.action === 'break') {
         // Open app and start break
         event.waitUntil(
-            clients.openWindow('/?action=break')
+            clients.openWindow('?action=break')
         );
     } else {
         // Just open the app
         event.waitUntil(
-            clients.openWindow('/')
+            clients.openWindow('.')
         );
     }
 });
