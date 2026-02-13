@@ -23,6 +23,7 @@ import {
     exportToExcel, exportDatabaseJSON, importDatabaseJSON
 } from './modules/export.js';
 import { showToast } from './utils.js';
+import { initPWA } from './modules/pwa.js';
 
 // ===== RESTORE SESSION =====
 function restoreSession() {
@@ -207,6 +208,8 @@ function init() {
     }
 
     setInterval(updateDates, 60000);
+
+    initPWA();
 
     // Register SW
     if ('serviceWorker' in navigator) {
