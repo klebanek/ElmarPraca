@@ -157,16 +157,6 @@ export function renderHistory() {
                 if (selectionState.selectedIndices.has(index)) {
                    selectionState.selectedIndices.delete(index);
                 }
-                // Re-calculate selection indices since array shifted?
-                // The original code handled shifting:
-                // "const newSelected = new Set(); selectionState.selectedIndices.forEach(i => { if (i > index) { newSelected.add(i - 1); } else { newSelected.add(i); } }); selectionState.selectedIndices = newSelected;"
-                // But `deleteFromHistory` in `storage.js` just deletes.
-                // I need to implement index shifting in `history.js` or `storage.js` for selection state.
-                // But selection state is in `state.js`.
-                // Actually `deleteFromHistory` function in `storage.js` only modifies local storage array.
-                // The caller should handle selection update.
-                // Let's copy the logic from original `app.js` to here.
-
                 const newSelected = new Set();
                 selectionState.selectedIndices.forEach(i => {
                     if (i > index) {
